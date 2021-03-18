@@ -3,28 +3,31 @@
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 1024
 
-#define SPLASH_STATE_SHOW_TIME 3.0
+#define SPLASH_STATE_SHOW_TIME 0.0
 
-#define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/res/bg.png"
-#define MAIN_MENU_BACKGROUND_FILEPATH "Resources/res/bg.png"
-
-#define GAME_BACKGROUND_FILEPATH "Resources/res/bg.png"
-#define GAME_OVER_BACKGROUND_FILEPATH "Resources/res/bg.png"
+#define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/res/sky.png"
+#define MAIN_MENU_BACKGROUND_FILEPATH "Resources/res/sky.png"
+#define GAME_BACKGROUND_FILEPATH "Resources/res/sky.png"
+#define GAME_OVER_BACKGROUND_FILEPATH "Resources/res/sky.png"
 
 #define GAME_TITLE_FILEPATH "Resources/res/title.png"
-#define PLAY_BUTTON_FILEPATH "Resources/res/playButton.png"
+#define PLAY_BUTTON_FILEPATH "Resources/res/PlayButton.png"
 
-#define PIPE_UP_FILEPATH "Resources/res/spike.png"
-#define PIPE_DOWN_FILEPATH "Resources/res/chain.png"
-#define SCORING_PIPE_FILEPATH "Resources/res/chain.png"
+#define PIPE_UP_FILEPATH "Resources/res/PipeUp.png"
+#define PIPE_DOWN_FILEPATH "Resources/res/PipeDown.png"
 
-#define LAND_FILEPATH "Resources/res/ground.png"
+#define LAND_FILEPATH "Resources/res/land.png"
 
-#define BAT_FRAME_1_FILEPATH "Resources/res/BAT1.png"
-#define BAT_FRAME_2_FILEPATH "Resources/res/BAT2.png"
-#define BAT_FRAME_3_FILEPATH "Resources/res/BAT3.png"
-#define BAT_FRAME_4_FILEPATH "Resources/res/BAT2.png"
+#define BIRD_FRAME_1_FILEPATH "Resources/res/bird-01.png"
+#define BIRD_FRAME_2_FILEPATH "Resources/res/bird-02.png"
+#define BIRD_FRAME_3_FILEPATH "Resources/res/bird-03.png"
+#define BIRD_FRAME_4_FILEPATH "Resources/res/bird-04.png"
+
+#define SCORING_PIPE_FILEPATH "Resources/res/InvisibleScoringPipe.png"
+
+#define FLAPPY_FONT_FILEPATH "Resources/font/FlappyFont.ttf"
 #define BATTY_FONT_FILEPATH "Resources/font/TheWildBreathOfZelda-15Lv.ttf"
+
 #define GAME_OVER_TITLE_FILEPATH "Resources/res/GameOver.png"
 #define GAME_OVER_BODY_FILEPATH "Resources/res/GameOverBody.png"
 
@@ -33,14 +36,18 @@
 #define GOLD_MEDAL_FILEPATH "Resources/res/goldMedal.png"
 #define PLATINUM_MEDAL_FILEPATH "Resources/res/platinumMedal.png"
 
+#define HIT_SOUND_FILEPATH "Resources/audio/Hit.wav"
+#define POINT_SOUND_FILEPATH "Resources/audio/Point.wav"
+#define WING_SOUND_FILEPATH "Resources/audio/Wing.wav"
 
 #define PIPE_MOVEMENT_SPEED 200.0f
-#define PIPE_SPAWN_FREQUENCY 0.5f
-#define BAT_ANIMATION_DURATION 0.5f
+#define PIPE_SPAWN_FREQUENCY 1.5f
 
-#define BAT_STATE_STILL 1
-#define BAT_STATE_FALLING 2
-#define BAT_STATE_FLYING 3
+#define BIRD_ANIMATION_DURATION 0.4f
+
+#define BIRD_STATE_STILL 1
+#define BIRD_STATE_FALLING 2
+#define BIRD_STATE_FLYING 3
 
 #define GRAVITY 350.0f
 #define FLYING_SPEED 350.0f
@@ -57,7 +64,9 @@ enum GameStates
 };
 
 #define FLASH_SPEED 1500.0f
-#define TIME_BEFOREGAMEOVER_APPEARS 1.5f
+
+#define TIME_BEFORE_GAME_OVER_APPEARS 1.5f
+
 #define BRONZE_MEDAL_SCORE 0
 #define SILVER_MEDAL_SCORE 5
 #define GOLD_MEDAL_SCORE 25

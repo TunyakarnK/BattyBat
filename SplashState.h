@@ -1,24 +1,24 @@
 #pragma once
+
 #include <SFML/Graphics.hpp>
 #include "State.h"
 #include "Game.h"
 
-class SplashState : public State
-{
-public:
-	SplashState(GameDataRef data);
+	class SplashState : public State
+	{
+	public:
+		SplashState(GameDataRef data);
 
-	void Init();
+		void Init();
 
-	void HandleInput();
-	void Update(float dt);
-	void Draw(float dt);
+		void HandleInput();
+		void Update(float dt);
+		void Draw(float dt);
 
-private:
-	GameDataRef _data;
+	private:
+		GameDataRef _data;
 
-	sf::Clock _clock;
+		sf::Clock _clock;
 
-	sf::Sprite _background;
-};
-
+		sf::Sprite _background;
+	};
