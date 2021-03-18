@@ -1,8 +1,9 @@
-#include <iostream>
+#include "Game.h"
+#include "DEFINITIONS.h"
 
 int main()
 {
-	std::cout << "Hello World";
+	Game(SCREEN_WIDTH, SCREEN_HEIGHT, "Batty Bat");
 
-	return 0;
+	return EXIT_SUCCESS;
 }

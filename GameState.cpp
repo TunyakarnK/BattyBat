@@ -21,7 +21,7 @@ void GameState::Init()
 	_data->assets.LoadTexture("Bat Frame 3", BAT_FRAME_3_FILEPATH);
 	_data->assets.LoadTexture("Bat Frame 4", BAT_FRAME_4_FILEPATH);
 	_data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
-	_data->assets.LoadTexture("Btty Font", BATTY_FONT_FILEPATH);
+	_data->assets.LoadFont("Batty Font", BATTY_FONT_FILEPATH);
 
 	pipe = new Pipe(_data);
 	land = new Land(_data);
