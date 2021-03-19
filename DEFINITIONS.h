@@ -25,7 +25,6 @@
 
 #define SCORING_PIPE_FILEPATH "Resources/res/InvisibleScoringPipe.png"
 
-#define FLAPPY_FONT_FILEPATH "Resources/font/FlappyFont.ttf"
 #define BATTY_FONT_FILEPATH "Resources/font/TheWildBreathOfZelda-15Lv.ttf"
 
 #define GAME_OVER_TITLE_FILEPATH "Resources/res/GameOver.png"
@@ -50,7 +49,7 @@
 #define BAT_STATE_FLYING 3
 
 #define GRAVITY 350.0f
-#define FLYING_SPEED 350.0f
+#define FLYING_SPEED 400.0f
 
 #define FLYING_DURATION 0.25f
 

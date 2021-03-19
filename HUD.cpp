@@ -4,7 +4,7 @@
 
 HUD::HUD(GameDataRef data) : _data(data)
 	{
-		_scoreText.setFont(this->_data->assets.GetFont("Flappy Font"));
+		_scoreText.setFont(this->_data->assets.GetFont("Batty Font"));
 
 		_scoreText.setString("0");
 
@@ -14,7 +14,7 @@ HUD::HUD(GameDataRef data) : _data(data)
 
 		_scoreText.setOrigin(sf::Vector2f(_scoreText.getGlobalBounds().width / 2, _scoreText.getGlobalBounds().height / 2));
 
-		_scoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 2, _data->window.getSize().y / 5));
+		_scoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 2, 100));
 	}
 
 	HUD::~HUD()

@@ -55,22 +55,24 @@
         _retryButton.setTexture(this->_data->assets.GetTexture("Play Button"));
 
         _gameOverContainer.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_gameOverContainer.getGlobalBounds().width / 2), (_data->window.getSize().y / 2) - (_gameOverContainer.getGlobalBounds().height / 2)));
-        _gameOverTitle.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_gameOverTitle.getGlobalBounds().width / 2), _gameOverContainer.getPosition().y - (_gameOverTitle.getGlobalBounds().height * 1.2)));
-        _retryButton.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_retryButton.getGlobalBounds().width / 2), _gameOverContainer.getPosition().y + _gameOverContainer.getGlobalBounds().height + (_retryButton.getGlobalBounds().height * 0.2)));
 
-        _scoreText.setFont(this->_data->assets.GetFont("Flappy Font"));
+        _gameOverTitle.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_gameOverTitle.getGlobalBounds().width / 2),60));
+
+        _retryButton.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_retryButton.getGlobalBounds().width / 2), 770));
+
+        _scoreText.setFont(this->_data->assets.GetFont("Batty Font"));
         _scoreText.setString(std::to_string(_score));
         _scoreText.setCharacterSize(56);
         _scoreText.setFillColor(sf::Color::White);
         _scoreText.setOrigin(sf::Vector2f(_scoreText.getGlobalBounds().width / 2, _scoreText.getGlobalBounds().height / 2));
-        _scoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 2.15));
+        _scoreText.setPosition(sf::Vector2f(500, 450));
 
-        _highScoreText.setFont(this->_data->assets.GetFont("Flappy Font"));
+        _highScoreText.setFont(this->_data->assets.GetFont("Batty Font"));
         _highScoreText.setString(std::to_string(_highScore));
         _highScoreText.setCharacterSize(56);
         _highScoreText.setFillColor(sf::Color::White);
         _highScoreText.setOrigin(sf::Vector2f(_highScoreText.getGlobalBounds().width / 2, _highScoreText.getGlobalBounds().height / 2));
-        _highScoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 1.6));
+        _highScoreText.setPosition(sf::Vector2f(500, 600));
 
         if (_score >= PLATINUM_MEDAL_SCORE)
         {
