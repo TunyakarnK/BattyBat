@@ -38,16 +38,16 @@
 		this->_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		this->_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 		this->_data->assets.LoadTexture("Land", LAND_FILEPATH);
-		this->_data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
-		this->_data->assets.LoadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
-		this->_data->assets.LoadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
-		this->_data->assets.LoadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 1", BAT_FRAME_1_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 2", BAT_FRAME_2_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 3", BAT_FRAME_3_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 4", BAT_FRAME_4_FILEPATH);
 		this->_data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
 		this->_data->assets.LoadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
 
 		pipe = new Pipe(_data);
 		land = new Land(_data);
-		bird = new Bird(_data);
+		bat = new Bat(_data);
 		flash = new Flash(_data);
 		hud = new HUD(_data);
 
@@ -75,7 +75,7 @@
 				if (GameStates::eGameOver != _gameState)
 				{
 					_gameState = GameStates::ePlaying;
-					bird->Tap();
+					bat->Tap();
 
 					_wingSound.play();
 				}
@@ -87,7 +87,7 @@
 	{
 		if (GameStates::eGameOver != _gameState)
 		{
-			bird->Animate(dt);
+			bat->Animate(dt);
 			land->MoveLand(dt);
 		}
 
@@ -107,13 +107,13 @@
 				clock.restart();
 			}
 
-			bird->Update(dt);
+			bat->Update(dt);
 
 			std::vector<sf::Sprite> landSprites = land->GetSprites();
 
 			for (int i = 0; i < landSprites.size(); i++)
 			{
-				if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, landSprites.at(i), 1.0f))
+				if (collision.CheckSpriteCollision(bat->GetSprite(), 0.7f, landSprites.at(i), 1.0f))
 				{
 					_gameState = GameStates::eGameOver;
 
@@ -127,7 +127,7 @@
 
 			for (int i = 0; i < pipeSprites.size(); i++)
 			{
-				if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, pipeSprites.at(i), 1.0f))
+				if (collision.CheckSpriteCollision(bat->GetSprite(), 0.625f, pipeSprites.at(i), 1.0f))
 				{
 					_gameState = GameStates::eGameOver;
 
@@ -143,7 +143,7 @@
 
 				for (int i = 0; i < scoringSprites.size(); i++)
 				{
-					if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f))
+					if (collision.CheckSpriteCollision(bat->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f))
 					{
 						_score++;
 
@@ -176,7 +176,7 @@
 
 		pipe->DrawPipes();
 		land->DrawLand();
-		bird->Draw();
+		bat->Draw();
 
 		flash->Draw();
 

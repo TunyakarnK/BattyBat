@@ -70,7 +70,7 @@
         _highScoreText.setCharacterSize(56);
         _highScoreText.setFillColor(sf::Color::White);
         _highScoreText.setOrigin(sf::Vector2f(_highScoreText.getGlobalBounds().width / 2, _highScoreText.getGlobalBounds().height / 2));
-        _highScoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 1.78));
+        _highScoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 1.6));
 
         if (_score >= PLATINUM_MEDAL_SCORE)
         {
@@ -89,7 +89,7 @@
             _medal.setTexture(_data->assets.GetTexture("Bronze Medal"));
         }
 
-        _medal.setPosition(175, 465);
+        _medal.setPosition(195, 475);
     }
 
     void GameOverState::HandleInput()

@@ -31,7 +31,7 @@
 
 		Pipe* pipe;
 		Land* land;
-		Bird* bird;
+		Bat* bat;
 		Collision collision;
 		Flash* flash;
 		HUD* hud;

@@ -14,7 +14,7 @@
 	{
 		sf::Sprite sprite(this->_data->assets.GetTexture("Pipe Up"));
 
-		sprite.setPosition(this->_data->window.getSize().x, this->_data->window.getSize().y - sprite.getLocalBounds().height - _pipeSpawnYOffset);
+		sprite.setPosition(this->_data->window.getSize().x, this->_data->window.getSize().y - sprite.getLocalBounds().height - _pipeSpawnYOffset+20);
 
 		pipeSprites.push_back(sprite);
 	}
@@ -23,7 +23,7 @@
 	{
 		sf::Sprite sprite(this->_data->assets.GetTexture("Pipe Down"));
 
-		sprite.setPosition(this->_data->window.getSize().x, -_pipeSpawnYOffset);
+		sprite.setPosition(this->_data->window.getSize().x, -_pipeSpawnYOffset-20);
 
 		pipeSprites.push_back(sprite);
 	}

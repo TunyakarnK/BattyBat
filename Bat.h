@@ -8,11 +8,11 @@
 #include <vector>
 
 
-	class Bird
+	class Bat
 	{
 	public:
-		Bird(GameDataRef data);
-		~Bird();
+		Bat(GameDataRef data);
+		~Bat();
 
 		void Draw();
 
@@ -27,7 +27,7 @@
 	private:
 		GameDataRef _data;
 
-		sf::Sprite _birdSprite;
+		sf::Sprite _batSprite;
 		std::vector<sf::Texture> _animationFrames;
 
 		unsigned int _animationIterator;
@@ -36,7 +36,7 @@
 
 		sf::Clock _movementClock;
 
-		int _birdState;
+		int _batState;
 
 		float _rotation;
 
